@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+  <!--  Olga Osinskaya -->
+  <html>
+<head>
+<meta charset="UTF-8" />
+<title>Fahrenheit to Kelvin Converter</title>
+<!--Write a program that converts Fahrenheit to Kelvin temperatures.
+The formula is as follows: K = (F + 459.67) × 5/9
+The program should ask the user to enter a temperature in Fahrenheit
+using prompt dialog box, and then display the temperature converted to Kelvin.
+//-->
+</head>
+<body>
+<h3>Fahrenheit to Kelvin Converter</h3>
+<script>
+//ask the user to enter a temperature in Fahrenheit
+var Fahrenheit = prompt("Please enter a temperature in Fahrenheit: ","");
+//parseFloat() function converts user input into numbers.	
+Fahrenheit = parseFloat(Fahrenheit);
+//calculate
+var kelvin=(Fahrenheit-459.67)*(5/9);	
+//Output the temperature converted to Kelvin into the page.		
+document.write("<p>Fahrenheit: "+ Fahrenheit + "</p>");	
+document.write("<p>Kelvin:     "+ kelvin + "</p>");	
+</script>
+</body>
+</html>

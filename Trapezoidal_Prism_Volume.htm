@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--  Olga Osinskaya -->
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Trapezoidal Prism Volume</title>
+
+
+</head>
+<body>
+<h3>Trapezoidal Prism Volume</h3>
+<script>
+//Ask user to enter Length, Height, Base Width, and Top Width values, store them in variables. 
+var Length = prompt("Please enter a Length: ","");
+var Height = prompt("Please enter a Height: ","");
+var Base_Width = prompt("Please enter a Base Width: ","");
+var Top_Width = prompt("Please enter a Top Width: ","");
+//parseFloat() function converts user input into numbers.	
+Length = parseFloat(Length);
+Height = parseFloat(Height);
+Base_Width = parseFloat(Base_Width);
+Top_Width = parseFloat(Top_Width);
+//Calculate volume of a prism with the given measurements.	
+var volume=Length*Height*((Base_Width+Top_Width)/2);
+//Output all the measurements and the volume into the web page.
+document.write("<p>Length: "+ Length + "</p>");	
+document.write("<p>Height:     "+ Height + "</p>");	
+document.write("<p>Base Width: "+ Base_Width + "</p>");	
+document.write("<p>Top Width:     "+ Top_Width + "</p>");	
+document.write("<p>Volume is Length*Height*((Base_Width+Top_Width)/2):     "+ volume + "</p>");	
+
+//Reduce all four measurements of the prism by 25%. 
+var Length = Length*0.25;
+var Height = Height*0.25;
+var Base_Width = Base_Width*0.25;
+var Top_Width = Top_Width*0.25;	
+//Calculate the volume again using the reduced values.	
+var volume=Length*Height*((Base_Width+Top_Width)/2);
+//Output the reduced measurements and reduced volume into the page.	
+var txt = "After Reduce:";
+document.write("<p>" + txt.bold() + "</p>");	
+document.write("<p>Length after reduce: "+ Length + "</p>");	
+document.write("<p>Height after reduce:     "+ Height + "</p>");	
+document.write("<p>Base Width after reduce: "+ Base_Width + "</p>");	
+document.write("<p>Top Width after reduce:     "+ Top_Width + "</p>");	
+document.write("<p>Volume after reduce is: Length*Height*((Base_Width+Top_Width)/2):     "+ volume + "</p>");		
+	
+</script>
+</body>
+</html> 
+
+
+
+
