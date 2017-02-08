@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--  Olga Osinskaya -->
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Cone Volume Function  </title>
+
+</head>
+
+<h3>Cone Volume Function </h3>
+	
+<script> 
+function coneVolume( height, radius ) 	
+	{
+		// calculate the volume
+		var volume = Math.PI*r*r*(h/3);
+		//displays the volume 
+		document.write("<p>The volume is: " + volume.toFixed(2) + "</p>"); 
+	}
+</script>
+<body>	
+<script> 	
+	//ask a user to enter a height
+	var h= prompt("Please, enter a height: ","");
+	//ask a user to enter a radius
+	var r= prompt("Please, enter a radius: ","");
+	//parseFloat() function converts user input into numbers.
+	h=parseFloat(h);
+	r=parseFloat(r);
+	//output the value given by the user 
+	document.write("<p> The height is: " + h + "</p>");
+	document.write("<p> The radius is: " + r + "</p>"); 
+//call the function	
+coneVolume(h,r); 	
+	
+	
+</script>	
+
+</body>
+</html> 
+
+
+
+

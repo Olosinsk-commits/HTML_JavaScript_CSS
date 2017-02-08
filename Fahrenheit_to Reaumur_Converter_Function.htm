@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--  Olga Osinskaya -->
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Fahrenheit to Reaumur Converter Function </title>
+
+</head>
+
+<h3>Fahrenheit to Reaumur Converter Function </h3>
+	
+<script> 
+function FR_converter(tf) 	
+	{
+		// calculate the Fahrenheit temperature passed as parameter to Réaumur:
+		var Reaumur = (tf-32)*(4/9);
+		//displays the temperature in Réaumur in the browser window. 
+		document.write("<p> Reaumur: " + Reaumur.toFixed(2) + "</p>"); 
+	}
+</script>
+<body>	
+<script> 	
+	//ask the user to enter a temperature in Fahrenheit
+	var Fahrenheit= prompt("Please, enter a temperature in Fahrenheit: ","");
+	//parseFloat() function converts user input into numbers.
+	Fahrenheit=parseFloat(Fahrenheit);
+	//output the value given by the user 
+	document.write("<p> Fahrenheit: " + Fahrenheit + "</p>"); 	
+//call the function, passing the Fahrenheit value as an argument. 	
+FR_converter(Fahrenheit); 	
+	
+	
+</script>	
+
+</body>
+</html> 
+
+
+
+
