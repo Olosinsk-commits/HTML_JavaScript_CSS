@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--  Olga Osinskaya -->
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Roman Numerals</title>
+
+</head>
+
+<h3>Roman Numerals</h3>
+<p id="demo"></p>	
+<script> 
+function number_convert( numbers ) 	
+	{
+//transform a number entered into a roman numeral.
+    switch(number) {	
+        case 1:
+            text = "I";
+        break;
+        case 2:
+            text = "II";
+        break;
+        case 3:
+            text = "III";
+        break;
+		case 4:
+            text = "IV";
+        break;
+	    case 5:
+            text = "V";
+        break;
+        case 6:
+            text = "VI";
+        break;
+        case 7:
+            text = "VII";
+        break;
+        case 8:
+            text = "VIII";
+        break;
+		case 9:
+            text = "IX";
+        break;
+		case 10:
+            text = "X";
+        break;
+		//Check if the number is in the range from 1 to 10. If not –output error message.	
+        default:
+        document.getElementById("demo").innerHTML = "Number out of range";
+    }
+//Output the original number and its Roman equivalent.		
+document.getElementById("demo").innerHTML = "Arabic: " +number+"\nRoman Equivalent: "+text;
+		
+}
+
+</script>
+<body>	
+<script> 	
+	//ask a user to enter a number
+	var number= prompt("Please, enter a number that at least 1, but not greater than 10: ","");
+	//parseFloat() function converts user input into numbers.
+	number=parseFloat(number);
+//call the function	
+number_convert(number); 	
+	
+	
+</script>	
+
+</body>
+</html> 
+
+
+
+

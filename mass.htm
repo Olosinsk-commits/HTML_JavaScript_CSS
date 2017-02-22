@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--  Olga Osinskaya -->
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Mass and Weight</title>
+
+</head>
+
+<h3>Mass and Weight </h3>
+	
+<script> 
+function N_Weight(Weight) 	
+	{
+	//calculate its weight
+	var w=m*9.8; 
+    w=parseFloat(w);
+	//If the object weighs more than 1000 Newtons, display a message indicating that it is too heavy
+	if (w>1000)
+	{document.write("<p> "+w+ "- it is too heavy!!! </p>");
+	}
+	//If the object weighs less than 10 Newtons, display a message indicating that it is too light.
+	if(w<10)
+	{document.write("<p>" +w+ "- it is too light!!! </p>");
+	}
+	// else - display a normal	
+    if(w<=1000&&w>=10)
+		document.write("<p>" +w+ "- it is normal!!!</p>");
+	}
+</script>
+<body>	
+<script> 	
+	//ask a user to enter a mass
+	var m= prompt("Please, enter an object’s mass: ","");	
+	//parseFloat() function converts user input into numbers.
+	m=parseFloat(m);
+
+	
+//call the function	
+N_Weight(m); 	
+	
+</script>	
+
+</body>
+</html> 
+
+
+
+

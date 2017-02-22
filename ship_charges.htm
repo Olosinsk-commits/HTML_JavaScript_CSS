@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--  Olga Osinskaya -->
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Shipping Charges</title>
+
+</head>
+
+<h3>Shipping Charges</h3>
+	
+<script> 
+function Shipping_Charges(Weight) 	
+	{
+	//calculate its Charges
+
+	//2 pounds or less
+	if (m<=2)
+	{   
+		var c=m*1.10; 
+		c=parseFloat(c);
+		document.write("<p> Package that weighs " +m+ " pounds will cost $"+c.toFixed(2)+" to ship. </p>");
+	}
+		
+	//Over 2 pounds but not more than 6 pounds 
+	if (m>2&&m<=6)
+	{   
+		var c=m*2.20; 
+		c=parseFloat(c);
+		document.write("<p> Package that weighs " +m+ " pounds will cost $"+c.toFixed(2)+" to ship. </p>");
+	}	
+	//Over 6 pounds but not more than 10 pounds
+	if (m>6&&m<=10)
+	{   
+		var c=m*3.70; 
+		c=parseFloat(c);
+		document.write("<p> Package that weighs " +m+ " pounds will cost $"+c.toFixed(2)+" to ship. </p>");
+	}	
+	//Over 10 pounds 
+		if (m>10)
+	{   
+		var c=m*3.80; 
+		c=parseFloat(c);
+		document.write("<p> Package that weighs " +m+ " pounds will cost $"+c.toFixed(2)+" to ship. </p>");
+	}	
+	}
+</script>
+<body>	
+<script> 	
+	//ask a user to enter a mass
+	var m= prompt("Please, enter the weight of a package: ","");	
+	//parseFloat() function converts user input into numbers.
+	m=parseFloat(m);
+
+	
+//call the function	
+Shipping_Charges(m); 	
+	
+</script>	
+
+</body>
+</html> 
+
+
+
+
+

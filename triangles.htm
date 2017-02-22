@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	   <title>Areas of Triangles</title>
+	   <meta charset="utf-8" >
+           <!-- Olga Osinskaya -->
+	
+	
+		<h3>Areas of Triangles</h3>
+		
+	
+<script>	
+function compare(){
+	//gets values from the textboxes 
+	var B1 =  document.getElementById("Base1").value;
+	//parseFloat() function converts user input into numbers.
+	B1=parseFloat(B1);
+	var H1 =  document.getElementById("Height1").value;
+	H1=parseFloat(H1);
+	//calculate
+	var area1=(H1*B1)/2;
+	area1=parseFloat(area1);
+	
+	var B2 =  document.getElementById("Base2").value;
+	B2=parseFloat(B2);
+	var H2 =  document.getElementById("Height2").value;
+	H2=parseFloat(H2);
+	var area2=(H2*B2)/2;
+	
+	area2=parseFloat(area2);
+	//Use the if statement to specify which block of JavaScript code to be executed if a condition is met of specific criteria.
+	if (area1>area2)
+	{
+	document.getElementById("output").innerHTML = "The 1st triangle is greater!!";
+	}
+	if (area2>area1)
+	{
+	document.getElementById("output").innerHTML = "The 2st triangle is greater!!!";
+	}
+	if(area2==area1)
+	{
+	document.getElementById("output").innerHTML = "The triangles have same area!!!";
+	}	
+}
+//call clean function 	
+function c()
+{
+	document.getElementById("output").innerHTML="";
+}
+</script>
+</head>	
+<body>		
+		<form id="compare">
+			Please, enter base and height of 1st triangle:
+			<br><br>
+			Base:  <input type="text" id="Base1" name="Base1" size="10" >
+			Height:  <input type="text" id="Height1" name="Height1" size="10" >
+			<br><br>
+			Please, enter base and height of 2st triangle:
+            <br><br>
+			Base:  <input type="text" id="Base2" name="Base2" size="10" >
+			Height:  <input type="text" id="Height2" name="Height2" size="10" >
+			<br><br>
+<!-- The function compare is called onclick of the “Compare” button.-->
+			<input type = "button" value="Compare" onclick= "compare()" >
+			<input type = "reset" value="Clear Form" onclick="c()">
+			
+		</form>
+<p id="output"></p>
+			
+
+
+	
+	</body>
+</html>
