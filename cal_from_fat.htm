@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--  Olga Osinskaya -->
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Calories from Fat and Carbohydrates</title>
+
+</head>
+
+<h3>Calories from Fat and Carbohydrates </h3>
+	
+<script> 
+function calorie_calculator(fat, carb)	
+	{
+		// calculate the grams of fat and calories from fat values
+		var calffat = f*9;
+		//displays the grams of fat and calories from fat values 
+		document.write("<p>The grams of fat and calories from fat values: " + calffat.toFixed(2) + "</p>"); 
+		
+		// calculate the grams of carbs and calories from carbs values
+		var calfcarbs = c*4;
+		//displays the volume 
+		document.write("<p>The grams of carbs and calories from carbs values: " + calfcarbs.toFixed(2) + "</p>"); 
+	}
+</script>
+<body>	
+<script> 	
+	//ask a user to enter a fat grams that they consumed in a day
+	var f= prompt("Please, enter a fat grams that you consumed in a day: ","");
+	//ask a user to enter a carbohydrate grams
+	var c= prompt("Please, enter the number of carbohydrate grams that you consumed in a day: ","");
+	//parseFloat() function converts user input into numbers.
+	f=parseFloat(f);
+	c=parseFloat(c);
+	//output the value given by the user 
+	document.write("<p> The grams that you consumed in a day: " + f + "</p>");
+	document.write("<p> The the number of carbohydrate grams that you consumed in a day: " + c + "</p>"); 
+	
+//call the function	
+calorie_calculator(f,c); 	
+	
+	
+</script>	
+
+</body>
+</html> 
+
+
+
+

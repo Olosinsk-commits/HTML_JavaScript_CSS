@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="utf-8" >
+		<title>Software Sales</title>
+    <!-- Olga Osinskaya-->
+		<script>
+function Soft_sal( )
+		{
+		//1.gets values from the textboxes with ids number 
+		var n = document.getElementById("number").value;
+		//parseFloat() function converts user input into numbers.
+		n=parseFloat(n);	
+		
+		//2.calculate the amount of the discount
+		//0 – 9 = no discount
+        if (n>=0&&n<=9)
+		{
+			document.getElementById("am_disk").value= 0;
+			var total=n*99;
+			document.getElementById("total_am").value=total.toFixed(2);
+		}	
+		//10-19  = 20%
+		if (n>10&&n<=19)
+		{   var total=n*99;
+		    total=parseFloat(total);
+			var discount=total*0.2;
+		    discount=parseFloat(discount);
+		    var total_d=total-discount;
+			document.getElementById("am_disk").value= discount.toFixed(2);
+			
+			document.getElementById("total_am").value=total_d.toFixed(2);
+		}
+		//20-49 = 30%	
+		        if (n>=20&&n<=49)
+		{
+            var total=n*99;
+		    total=parseFloat(total);
+			var discount=total*0.3;
+		    discount=parseFloat(discount);
+		    var total_d=total-discount;
+			document.getElementById("am_disk").value= discount.toFixed(2);
+			
+			document.getElementById("total_am").value=total_d.toFixed(2);
+		}
+		//50-99 = 40%	
+		        if (n>=50&&n<=99)
+		{
+            var total=n*99;
+		    total=parseFloat(total);
+			var discount=total*0.4;
+		    discount=parseFloat(discount);
+		    var total_d=total-discount;
+			document.getElementById("am_disk").value= discount.toFixed(2);
+			
+			document.getElementById("total_am").value=total_d.toFixed(2);
+		}
+        //100 or more = 50%	
+		        if (n>=100)
+		{
+            var total=n*99;
+		    total=parseFloat(total);
+			var discount=total*0.5;
+		    discount=parseFloat(discount);
+		    var total_d=total-discount;
+			document.getElementById("am_disk").value= discount.toFixed(2);
+			
+			document.getElementById("total_am").value=total_d.toFixed(2);
+		}	
+		}
+			
+		</script>	
+	</head>
+	<body>
+    <h1>Software Sales</h1>
+    <form id = "form01">
+    <strong>Number of Packages:</strong> <input type = "text" id = "number" name = "number" size="2" />  
+    <br> <br>
+<!-- The function Soft_sal is called onclick of the “Calculate Discount” button.-->		
+    <input type = "button" value = "Calculate Discount" onclick= "Soft_sal()"/>
+    <input type = "reset" value = "Clear" />
+    <br> <br>
+    The amount of the discount: <input id="am_disk" name="am_disk" type="text" size="10" readonly>$
+	<br> <br>	
+	The total amount of the purchase after the discount: <input id="total_am" name="total_am" type="text" size="10" readonly>$
+
+    </form>
+
+    <h3>Quantity discounts:</h3> 
+
+    <ul>Quantity        Discount
+    <li>0 – 9 = no discount</li>
+    <li>10-19  = 20%</li> 
+    <li>20-49 = 30%</li> 
+    <li>50-99 = 40%</li> 
+	<li>100 or more = 50%</li> 	
+    </ul>
+    
+    </body>
+			
+		
+</html>
