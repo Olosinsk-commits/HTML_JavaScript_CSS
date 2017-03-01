@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bar Chart</title>
+  <meta charset="utf-8">
+  <!-- Olga Osinskaya -->
+
+
+  <h3><p>Bar Chart</p></h3>
+
+</head>
+
+<body>
+  <script>
+    document.write("<p>Part 1</p>")
+    	//ask the user to enter an integer number
+        var number=prompt("Please, enter a number: ","");
+    	//parseFloat() function converts user input into numbers. 
+        number=parseInt(number); 	
+    	document.write("<p>You entered: "+ number+ "</p>");   
+        if (number < 0)
+        {document.write("Number can't be negative! "); } 
+        else
+    	//Output its bar chart representation.	
+        {for(var i=1; i <= number; i++)
+        { 
+        	document.write("*"); 
+        }
+    	
+        }	 
+    document.write("<p>Part 2</p>")	  
+    	
+    function barChart(num, symbol)
+    	  {
+        document.write("<p>You entered: "+ numb+ "</p>");   
+        if (numb < 0)
+        {document.write("Number can't be negative! "); } 
+        else
+    	//prints out a “bar chart” of the number using the symbol provided.	
+        {for(var k=1; k <= numb; k++)
+        { 
+        	document.write(symb); 
+        }
+    	
+        }	 
+    	  }
+    	//ask the user to enter an integer number  
+        var numb=prompt("Please, enter a number: ","");
+    	 //parseFloat() function converts user input into numbers. 
+        numb=parseInt(numb); 
+    	//ask the user to enter a symbol    
+        var symb=prompt("Please, enter a symbol: ",""); 	
+    //call function 	  
+    barChart(numb, symb);
+  </script>
+
+</body>
+
+</html>

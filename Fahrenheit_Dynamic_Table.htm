@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ocean Levels</title>
+  <meta charset="utf-8">
+  <!-- Olga Osinskaya -->
+
+
+  <h3><p>Centigrade to Fahrenheit Dynamic Table</p></h3>
+
+</head>
+
+<body>
+  <!--Create table-->
+  <table border="1" width="10%">
+    <tr>
+      <th>Centigrade</th>
+      <th>Fahrenheit</th>
+    </tr>
+
+    <script>
+      //use for loop that iterates 20 times 		
+            var Centigrade=20;
+          	   
+          	
+                 for(var i=1; i <= Centigrade; i++)
+                  {   
+      				//print results in the table
+          			var Fahrenheit=9/5*i+32;
+          			document.write("<tr>");
+                  	document.write("<td>"+i+"</td>"); 
+          			document.write("<td>"+Fahrenheit.toFixed(2)+"</td>"); 
+          			document.write("</tr>");
+                  }
+    </script>
+  </table>
+</body>
+
+</html>

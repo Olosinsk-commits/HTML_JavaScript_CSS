@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pennies for Pay</title>
+  <meta charset="utf-8">
+  <!-- Olga Osinskaya -->
+
+
+  <h1>Pennies for Pay</h1>
+
+</head>
+
+<body>
+	 <table border="1" width="10%">
+    <tr>
+      <th>Day#</th>
+      <th>Day Pay</th>
+    </tr>
+  <script>
+    	//ask the user for the number of days
+        var days=prompt("Please, enter a number of days: ","");
+    	//parseFloat() function converts user input into numbers. 
+        days=parseFloat(days); 
+	    var total=0;
+	    //parseFloat() function converts user input into numbers. 
+	    total=parseFloat(total);
+	    var total_amount=0;
+	    var pennies=1;
+	    //parseFloat() function converts user input into numbers. 
+	    pennies=parseFloat(pennies);
+	    total_amount=parseFloat(total_amount);  
+        if (days < 0)
+        {document.write("Number can't be negative! "); } 
+        else
+    	//Output its bar chart representation.	
+        {for(var i=1; i <= days; i++)
+        { 
+        	        
+			        total=pennies/100; 
+			        pennies=pennies*2;
+			        //display a table showing what the salary was for each day
+          			document.write("<tr>");
+                  	document.write("<td>"+i+"</td>"); 
+          			document.write("<td>$"+total.toFixed(2)+"</td>"); 
+          			document.write("</tr>");
+			        total_amount+=total;
+
+			        
+        }
+    	
+        }	 
+  
+    	
+  </script>
+		   </table>
+		 <script>
+			 //show the total pay at the end of the period.
+			  var txt="The total amount is $";
+			     document.write("<p>"+txt.fontsize(5).bold() +total_amount.toFixed(2).fontsize(5).bold() +"</p>")	
+		 </script>
+
+</body>
+
+</html>

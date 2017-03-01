@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ocean Levels</title>
+  <meta charset="utf-8">
+  <!-- Olga Osinskaya -->
+
+
+  <h3><p>Ocean Levels</p></h3>
+
+</head>
+
+<body>
+  <!--Create table-->
+  <table border="1" width="10%">
+    <tr>
+      <th>Year</th>
+      <th>Level</th>
+    </tr>
+
+    <script>
+      //use for loop that iterates 25 times 		
+            var years=25;
+          	   
+          	
+                 for(var i=1; i <= years; i++)
+                  {   
+      				//print results in the table
+          			var risen=i*1.5;
+          			document.write("<tr>");
+                  	document.write("<td>"+i+"</td>"); 
+          			document.write("<td>"+risen+"</td>"); 
+          			document.write("</tr>");
+                  }
+    </script>
+  </table>
+</body>
+
+</html>
