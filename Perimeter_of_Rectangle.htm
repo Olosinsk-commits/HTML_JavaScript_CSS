@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--  Olga Osinskaya -->
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Perimeter of Rectangle</title>
+
+</head>
+
+<h3>Perimeter of Rectangle</h3>
+	
+<script> 
+function perimeter(l, w)
+	{
+		// calculate the perimeter
+		var perimeter = 2*(l+w);
+		//return the perimeter
+		return perimeter;
+	}
+</script>
+<body>	
+<script> 	
+	//ask a user to enter widths1
+	var widths1= prompt("Please, enter a widths1: ","");
+	//ask a user to enter a lengths1
+	var lengths1= prompt("Please, enter a lengths1: ","");
+	//parseFloat() function converts user input into numbers.
+	widths1=parseFloat(widths1);
+	lengths1=parseFloat(lengths1);
+	//output the value given by the user 
+	document.write("<p> The 1st Rectangle has Widths: " + widths1 + "  and Lengths: "+ lengths1+"</p>");
+
+    //ask a user to enter widths2
+	var widths2= prompt("Please, enter a widths2: ","");
+	//ask a user to enter a lengths1
+	var lengths2= prompt("Please, enter a lengths2: ","");
+	//parseFloat() function converts user input into numbers.
+	widths2=parseFloat(widths2);
+	lengths2=parseFloat(lengths2);
+	//output the value given by the user 
+	document.write("<p> The 2st Rectangle has Widths: " + widths2 + " and lengths: "+ lengths2+"</p>");
+	
+//call the function	
+		
+var per1= perimeter(widths1,lengths1); 	
+var per2= perimeter(widths2,lengths2); 	
+	
+document.write("<p>1st Perimetr: "+ per1+ "; 2nd Perimetr: "+ per2+ "</p>");	
+	
+if (per1>per2)
+{ document.write("<p>The 1st Rectangle has the largest perimeter: "+ per1+ "</p>"); 
+}
+else if (per2>per1)
+{ document.write("<p>The 2st Rectangle has the largest perimeter: "+ per2+ "</p>"); 
+}
+else		
+document.write("<p>The both Rectangles have same perimeter: " + per1+ "</p>"); 	
+	
+</script>	
+
+</body>
+</html> 
+
+
+
+

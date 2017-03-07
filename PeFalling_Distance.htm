@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--  Olga Osinskaya -->
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Falling Distance</title>
+
+</head>
+
+<h3> Falling Distance </h3>
+	
+<script> 
+//function fallingDistance(t) accepts an object’s falling time (in seconds) as an argument
+function fallingDistance(t)	
+	{
+	d_result=1/2*(9.8*t*t);
+		//return the distance
+        return d_result.toFixed(2);
+	}
+</script>
+<body>	
+	<table width="30" border="1">
+		<tr>
+			<th>Time/sec</th>
+			<th>Distance/m</th>
+	</tr>
+		
+<script> 	
+//calls the function in a loop that passes the values 1 through 10
+//as arguments and displays the return value.
+for (var time=1; time<=10; time++)
+{
+	document.write("<tr>");
+	document.write("<td>" + time +"</td>");
+	document.write("<td>" + fallingDistance(time) +"</td>");
+	document.write("</tr>");
+}
+	
+</script>	
+	</table>
+</body>
+</html> 
+
+
+
+

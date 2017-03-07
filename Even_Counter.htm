@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--  Olga Osinskaya -->
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Odd and Even Counter</title>
+
+</head>
+
+	
+<h3>Odd and Even Counter</h3>
+	
+<script>
+var countEven=0;
+var countOdd=0;	
+//isEven function determines whether the number is even or odd.	
+function isEven(num)
+{
+var status;
+if (num % 2 == 0)
+{ status = true; 
+}
+else
+{ status = false; }
+return status;
+}	
+</script>	
+<script> 
+//count how many times we get even and odd
+for (var i=1; i<=100; i++)
+{
+	//call random function
+	var r=Math.floor(1+100*Math.random());
+	if(isEven(r))
+	//count Even numbers	
+	{countEven++;
+	}
+//count Odd numbers	
+else {countOdd++;
+}
+}
+//print results	
+document.write("<p>The number of Even numbers generated: " +countEven+ "</p>");	
+document.write("<p>The number of Odd numbers generated: " +countOdd+ "</p>");		
+</script>
+
+<body>	
+</body>
+</html> 
+
+
+
+
