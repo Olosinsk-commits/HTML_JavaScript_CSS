@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--  Olga Osinskaya -->
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Array Analysis Function</title>
+
+</head>
+
+	
+<h3>Array Analysis Function</h3>
+	
+<script>
+//Write a function countOccurences(numArray, num) that takes an array of
+//numbers and a number as a parameter. The function counts and returns a number of times
+//a given number has been repeated in the array.
+//Example: Given the array: var array = [1, 1, 5, 6, 2, 11, 1, 8, 0]. If
+//we call the function countOccurences(array, 1), it will return 3, because 1 is
+//repeated in the given array 3 times.
+//Requirement: Function countOccurences() must take two parameters (array and
+//number) and return a value	
+
+var count=0;		
+function countOccurences(numArray, num)
+	{
+for(var index=0;index<numArray.length; index++)
+//search the number 	
+	if(numArray[index]==num)
+	{
+		//counts the frequency of given number 
+		count++;
+	}
+return count;
+	}	
+	
+var a=1;
+//creat array	
+var nums =  new Array(1, 1, 5, 6, 2, 11, 1, 8, 0);	
+//call function 	
+countOccurences(nums, a);
+a=parseInt(a);
+//print result	
+document.write("<p> Number "+a+ " was found " +count+ " time(s) in array: " + nums.toString() +"</p>");
+</script>
+
+<body>	
+</body>
+</html> 
+
+
+
+
