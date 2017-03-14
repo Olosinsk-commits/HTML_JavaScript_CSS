@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--  Olga Osinskaya -->
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Series of Integers</title>
+
+</head>
+
+	
+<h3>Series of Integers</h3>
+	
+<script>
+//creat variables 	
+var numbers = new Array();
+var more; 	
+var num;
+var i=0;
+var totalN=0;
+var totalP=0;	
+//input a number and store it in array	
+do{	
+//ask the user to enter arbitrary number of positive and negative numbers. 
+num=prompt("Please, enter a positive or negative number: ",""); 
+num=parseFloat(num);	
+numbers[i] = num;
+i++;
+more = confirm("One more number?");
+}
+//continue the input while more is true
+while(more==true);	
+	
+document.write("You entered the following negative numbers: ") 
+for (i=0;i<numbers.length;i++)
+{  
+//count the negative numbers		
+if(numbers[i] <0&&numbers[i]!=0)
+{
+	    document.write(numbers[i]+", ");
+		totalN=totalN+numbers[i];
+}		
+}
+document.write("<p>The sum of all negative numbers is: "+totalN+"</p>");
+	
+	
+document.write("You entered the following positive numbers: ") 
+for (i=0;i<numbers.length;i++)
+{  
+////count the positive numbers		
+if(	numbers[i] >0&&numbers[i]!=0)
+{
+	    //totalP=parseFloat(totalP);
+	    document.write(numbers[i]+", ");
+		totalP=totalP+numbers[i];
+}		
+}
+//print the total of positive numbers	
+document.write("<p>The sum of all positive numbers is: "+totalP+"</p>");	
+
+</script>
+
+<body>	
+</body>
+</html> 
+
+
+
+

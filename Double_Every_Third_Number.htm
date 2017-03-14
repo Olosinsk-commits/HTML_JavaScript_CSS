@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--  Olga Osinskaya -->
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Double Every Third Number</title>
+
+</head>
+
+	
+<h3>Double Every Third Number</h3>
+	
+<script>
+//Design and implement a program that
+//1. Asks the user to enter a series of numbers and stores numbers in the array. The
+//series is of arbitrary size. Each time the user enters the number the program asks
+//whether the user wants to enter one more number.
+//2. Doubles every third number in the series. Stores the resulting series either in the
+//same array or in a new one.
+//Example: series 3 2 4 5 6 7 8 becomes 3 2 8 5 6 14 8.
+//3. Outputs both the original and the modified arrays.		
+//creat variables 	
+var numbers = new Array();
+var more; 	
+var num;
+var i=0;	
+//input a number and store it in array	
+do{	
+//Asks the user to enter a series of numbers and stores numbers in the array.
+num=prompt("Please, enter a number: ",""); 
+num=parseFloat(num);	
+numbers[i] = num;
+i++;
+more = confirm("One more number?");
+}
+//continue the input while more is true
+while(more==true);	
+
+//creat 2nd array	
+var numbers_copy = new Array(numbers.length);
+
+//copy array
+for(i = 0; i<numbers.length; i++)
+{  
+numbers_copy[i]=numbers[i]; 
+}	
+	
+//double every 3rd number in the copied array	
+for (i=2;i<numbers_copy.length;i+=3)
+{  
+numbers_copy[i]=numbers_copy[i]*2;		
+}
+
+
+
+//Outputs the original array.	
+document.write("Example: ")	
+
+for (i = 0; i < numbers.length; i++) 
+{ 
+	document.write(numbers[i]+" ");
+}	
+
+
+//Outputs the modified array.
+document.write(" becomes ")	
+for (i = 0; i < numbers_copy.length; i++) 
+{ 
+	document.write(numbers_copy[i]+" ");
+}	
+	
+</script>
+
+<body>	
+</body>
+</html> 
+
+
+
+

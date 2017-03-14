@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--  Olga Osinskaya -->
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Lottery Number Generator</title>
+
+</head>
+
+	
+<h3>Lottery Number Generator</h3>
+	
+<script>
+//Design and implement a program that generates a 7- digit lottery number.
+//The program should have an array with 7 elements. Write a loop that steps through the
+//array, randomly generating a number in the range 0 through 9 for each element. Then
+//write another loop that displays the contents of the array.
+//Hint: Generate integers in range 0-9 using the following formula:
+//randomNum = Math.floor(Math.random()*10)
+
+//create the Array
+var numbers = new Array();
+var randomNum;
+var i = 0;
+//fill out the array with random numbers	
+while(i<7)
+{
+randomNum = Math.floor(Math.random()*10);	
+randomNum=parseInt(randomNum);
+numbers[i]=	randomNum;
+i++;	
+}
+//display the content of the array	
+document.write("The randomly generated numbers: ")	
+for (i = 0; i < numbers.length; ++i ) 
+{ 
+	document.write(numbers[i]+", ");
+}
+
+</script>
+
+<body>	
+</body>
+</html> 
+
+
+
+
