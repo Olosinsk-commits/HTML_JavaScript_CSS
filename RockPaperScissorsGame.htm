@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--  Olga Osinskaya -->
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Rock, Paper, Scissors Game</title>
+
+</head>
+
+	
+<h3>Rock, Paper, Scissors Game</h3>
+	
+<script>
+//Design and implement a program that lets the user play the game of Rock, Paper, Scissors against the computer. 
+///The program should work as follows. 
+//1. When the program begins, a random number in the range 1 through 3 is
+//generated. If the number is 1, then the computer has chosen rock. If the number is 2, then the computer has chosen paper. 
+//If the number is 3, then the computer has chosen scissors. (Don’t display the computer’s choice yet.)
+//2. The user enters his or her choice of “rock”, “paper” or “scissors” at the keyboard.
+//3. The computer’s choice is displayed. 
+//4. The program should display a message indicating weather the user or the computer was the winner. 
+//A winner is selected according to the following rules:
+//o If one player chooses rock and the other player chooses scissors, then the rock wins. (The rock smashes the scissors.) 
+//o If one player chooses scissors and the other player chooses paper, then the scissors wins. (Scissors cuts paper.) 
+//o If one player chooses paper and the other player chooses rock, then the paper wins. (Paper wraps rock.) 
+//o If both players make the same choice, the game must be played again to determine the winner.
+
+//If the number is 1, then the computer has chosen rock. If the number is 2, then the computer has chosen paper. 
+function toWord(randomNum)	
+{	
+	var word;
+if (randomNum==1)
+{word='rock';
+}
+else if(randomNum==2)	
+{word='paper';
+}	
+else	
+{word='scissors';
+}
+	return word;
+}
+
+
+
+//ask user to enters his or her choice of “rock”, “paper” or “scissors” at the keyboard.
+var userc= prompt("Your turn! Please, enter a rock, paper or scissors: ","");	
+//generate a random number in the range 1 through 3 	
+var randomNums=Math.floor(1+Math.random()*3);	
+	
+	
+a2 = toWord(randomNums);	
+//print user's and computer's choose
+document.write("<p> Computer chooses: "+a2+ " </p>");		
+document.write("<p> Player chooses: "+userc+ " </p>");	
+
+var usert;	
+
+//convert user's enter to number
+if (userc=='rock')
+{usert=1;
+}
+else if(userc=='paper')	
+{usert=2;
+}	
+else 
+{usert=3;
+}
+		
+usert=parseInt(usert);
+randomNums=parseInt(randomNums);
+
+//The program displayыs a message indicating weather the user or the computer was the winner. 	
+var result =(randomNums - usert);   	
+if(result==1 ||result==-2)
+document.write("<p>Computer Wins</p>");		
+else if (result==2 ||result==-1)
+document.write("<p>Player Wins</p>");
+else
+document.write("<p>Player and computer tie!</p>");	
+
+</script>
+
+<body>	
+</body>
+</html> 
+
+
+
+
